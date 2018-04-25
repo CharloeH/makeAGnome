@@ -1,0 +1,14 @@
+﻿<Window x:Class="makeAGnome.SomeRandomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:makeAGnome"
+        mc:Ignorable="d"
+        Title="SomeRandomWindow" Height="300" Width="300">
+    <StackPanel>
+        <TextBox x:Name="txtShareThis" />
+        <Button x:Name="btnReturn" Content="Return" Click="btnReturn_Click" />
+        <Button x:Name="btnCancel" Content="Cancel" Click="btnCancel_Click" />
+    </StackPanel>
+</Window>

@@ -10,48 +10,44 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace makeAGnome
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ChangeControls.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ChangeControls : Window
     {
-        public static char keyForward = 'w';
-        public static char keyBackward = 's';
-        public static char keyLeft = 'a';
-        public static char keyRight = 'd';
-        public MainWindow()
+        string[] Controls = new string[10];
+        public ChangeControls()
         {
             InitializeComponent();
+            /*var win2 = MainWindow(Key[]);
+            win2.Show();
+            this.Close();*/
+
+            ChangeButtons(Controls);
         }
 
-        private void btnStart_Click(object sender, RoutedEventArgs e)
+        private void ChangeButtons(string[] Controls)
         {
-
+            Controls[1] = txtChangeForward.Text;//forward
+            Controls[2] = txtChangeBackward.Text;//backward
+            Controls[3] = txtChangeLeft.Text;//left
+            Controls[4] = txtChangeRight.Text;//right
+            Controls[5] = txtChangeShoot.Text;//shoot
         }
 
-        private void btnStart_KeyDown(object sender, KeyEventArgs e)
+        private void btnChange_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.W)
+            SomeRandomWindow someRandomWindow = new SomeRandomWindow();
+            bool? dialogResult = someRandomWindow.ShowDialog();
+            if (dialogResult == true)
             {
-
+                MessageBox.Show(someRandomWindow.getValue());
             }
-            if (e.Key == Key.S)
-            {
-
-            }
-            if(e.Key == Key.A)
-            {
-
-            }
-            if(e.Key == Key.D)
-            {
-
-            }
+            ChangeButtons(Controls);
         }
     }
 }
