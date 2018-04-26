@@ -49,5 +49,24 @@ namespace makeAGnome
             }
             ChangeButtons(Controls);
         }
+        private void txtChangeForward_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtChangeBackward_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtChangeLeft_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtChangeRight_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
