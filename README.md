@@ -1,2 +1,0 @@
-# makeAGnome
-aidan and seb
