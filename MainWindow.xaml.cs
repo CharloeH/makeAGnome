@@ -20,16 +20,20 @@ namespace makeAGnome
     /// </summary>
     public partial class MainWindow : Window
     {
-        string[] Controls = new string[10];
         public MainWindow()
         {
             InitializeComponent();
-
-            ChangeControls changeControls = new ChangeControls();
-            changeControls.Show();
-
-            CreatePlayer();
         }
+
+        private void btnChangeControls_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeControls ChangeControls = new ChangeControls();
+            bool? dialogResult = ChangeControls.ShowDialog();
+            if(dialogResult == true)
+            {
+                MessageBox.Show(ChangeControls.getValue());
+            }
+     }
 
         private void CreatePlayer()
         {
