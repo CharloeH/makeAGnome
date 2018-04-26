@@ -41,32 +41,15 @@ namespace makeAGnome
 
         private void btnChange_Click(object sender, RoutedEventArgs e)
         {
-            SomeRandomWindow someRandomWindow = new SomeRandomWindow();
-            bool? dialogResult = someRandomWindow.ShowDialog();
-            if (dialogResult == true)
-            {
-                MessageBox.Show(someRandomWindow.getValue());
-            }
-            ChangeButtons(Controls);
+            this.DialogResult = true;
         }
-        private void txtChangeForward_KeyDown(object sender, KeyEventArgs e)
+        public string getValue()
         {
+            return Controls[1] + Controls[2] + Controls[3] + Controls[4] + Controls[5];
+            
 
         }
-
-        private void txtChangeBackward_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void txtChangeLeft_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void txtChangeRight_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
+        
+        
     }
 }
