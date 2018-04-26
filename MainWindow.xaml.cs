@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,44 +10,37 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace makeAGnome
 {
     /// <summary>
-    /// Interaction logic for ChangeControls.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class ChangeControls : Window
+    public partial class MainWindow : Window
     {
         string[] Controls = new string[10];
-        public ChangeControls()
+        public MainWindow()
         {
             InitializeComponent();
-            /*var win2 = MainWindow(Key[]);
-            win2.Show();
-            this.Close();*/
 
-            ChangeButtons(Controls);
+            ChangeControls changeControls = new ChangeControls();
+            changeControls.Show();
+
+            CreatePlayer();
         }
 
-        private void ChangeButtons(string[] Controls)
+        private void CreatePlayer()
         {
-            Controls[1] = txtChangeForward.Text;//forward
-            Controls[2] = txtChangeBackward.Text;//backward
-            Controls[3] = txtChangeLeft.Text;//left
-            Controls[4] = txtChangeRight.Text;//right
-            Controls[5] = txtChangeShoot.Text;//shoot
-        }
-
-        private void btnChange_Click(object sender, RoutedEventArgs e)
-        {
-            SomeRandomWindow someRandomWindow = new SomeRandomWindow();
-            bool? dialogResult = someRandomWindow.ShowDialog();
-            if (dialogResult == true)
-            {
-                MessageBox.Show(someRandomWindow.getValue());
-            }
-            ChangeButtons(Controls);
+            Ellipse e1 = new Ellipse();
+            e1.Height = 20;
+            e1.Width = 20;
+            e1.Fill = Brushes.Red;
+            Canvas.SetTop(e1, 20);
+            Canvas.SetLeft(e1, 20);
+            PlaySpace.Children.Add(e1);
         }
     }
 }
+
