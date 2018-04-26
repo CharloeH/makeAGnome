@@ -1,45 +1,18 @@
-﻿<Window x:Class="makeAGnome.ChangeControls"
+<Window x:Class="makeAGnome.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:makeAGnome"
+        xmlns:local="clr-namespace:MakeAGname"
         mc:Ignorable="d"
-        Title="ChangeControls" Height="300" Width="300">
-    <Grid>
-        <TextBox x:Name="txtChangeShoot"
-                 Text="/"
-                 />
-        <Button x:Name="btnChange"
-                Click="btnChange_Click" Height="33"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid KeyDown="TextBox_KeyDown">
+        <Canvas x:Name="PlaySpace"
+                KeyDown="PlaySpace_KeyDown"
                 />
-        <TextBox x:Name="txtChangeForward"
-                 Text="w" Margin="80,53,169,192"
-                 HorizontalContentAlignment="Center"
-                 VerticalContentAlignment="Top"
-                 FontSize = "15"
-                 />
-        <TextBox x:Name="txtChangeBackward"
-                 Text="s"
-                 Margin="80,111,169,134"
-                 HorizontalContentAlignment="Center"
-                 VerticalContentAlignment="Top"
-                 FontSize = "15"
-                 />
-        <TextBox x:Name="txtChangeLeft"
-                 Text="a"
-                 Margin="80,82,169,163"
-                 HorizontalContentAlignment="Center"
-                 VerticalContentAlignment="Top"
-                 FontSize = "15"
-                 />
-        <TextBox x:Name="txtChangeRight"
-                 Text="d"
-                 Margin="80,140,169,105"
-                 HorizontalContentAlignment="Center"
-                 VerticalContentAlignment="Top"
-                 FontSize = "15"
-                 />
-
+        <Button x:Name="btnChangeControls"
+                Content="Change Controls"
+                Click="btnChangeControls_Click" Margin="199,136,188,131"
+                />
     </Grid>
 </Window>
