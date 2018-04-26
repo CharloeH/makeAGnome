@@ -1,4 +1,4 @@
-﻿<Window x:Class="makeAGnome.ChangeControls"
+<Window x:Class="makeAGnome.ChangeControls"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,6 +12,7 @@
                  HorizontalContentAlignment="Center"
                  VerticalContentAlignment="Top"
                  FontSize = "15"
+                 KeyDown="txtChangeForward_KeyDown"
                  />
         <TextBox x:Name="txtChangeBackward"
                  Text="s"
@@ -19,6 +20,7 @@
                  HorizontalContentAlignment="Center"
                  VerticalContentAlignment="Top"
                  FontSize = "15"
+                 KeyDown="txtChangeBackward_KeyDown"
                  />
         <TextBox x:Name="txtChangeLeft"
                  Text="a"
@@ -26,6 +28,7 @@
                  HorizontalContentAlignment="Center"
                  VerticalContentAlignment="Top"
                  FontSize = "15"
+                 KeyDown="txtChangeLeft_KeyDown"
                  />
         <TextBox x:Name="txtChangeRight"
                  Text="d"
@@ -33,7 +36,7 @@
                  HorizontalContentAlignment="Center"
                  VerticalContentAlignment="Top"
                  FontSize = "15"
+                 KeyDown="txtChangeRight_KeyDown"
                  />
-
     </Grid>
 </Window>
