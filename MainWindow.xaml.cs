@@ -48,7 +48,7 @@ namespace makeAGnome
         {
             Ellipse e1 = new Ellipse();
             e1.Height = 20;
-            e1.Width = 20;
+            e1.Width = e1.ActualHeight;
             e1.Fill = Brushes.Red;
             Canvas.SetTop(e1, 20);
             Canvas.SetLeft(e1, 20);
