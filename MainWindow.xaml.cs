@@ -65,6 +65,18 @@ namespace makeAGnome
                 e1.UpdateLayout();
             }
         }
+        /* 
+        private void drawRightWall()
+        {
+            Polygon polygon = new Polygon();
+            polygon.Fill = Brushes.Purple;
+            polygon.Points.Add(new Point(673, 0));
+            polygon.Points.Add(new Point(674, 123));
+            polygon.Points.Add(new Point(911, this.Height));
+            polygon.Points.Add(new Point(this.Width, this.Height));
+            polygon.Points.Add(new Point(this.Width, 0));
+            canvas.Children.Add(polygon);
+        }*/
     }
 }
 
